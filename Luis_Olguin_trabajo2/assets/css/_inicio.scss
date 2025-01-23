@@ -1,0 +1,805 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//HEADER
+header {
+    justify-content: space-between;
+}
+
+.heder01 {
+    display: flex;
+    align-items: center;
+    padding: 1% 8% 1% 8%;
+    font-family: $font-principal;
+    font-size: $font-zise-9;
+    font-weight: $Font-weight-thin;
+    color: $color-principal-morado;
+    display: flex;
+}
+
+.heder01-1 {
+    width: 40%;
+
+    ul {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+
+        li {
+            margin-left: 10px;
+        }
+
+        img {
+            padding: 1%;
+        }
+    }
+}
+
+.nav01 {
+    width: 30%;
+
+    ul {
+        list-style: none;
+        display: flex;
+
+        a {
+            text-decoration: none;
+            border-right: 2px solid purple;
+            /* Puedes ajustar el ancho y el color según tus preferencias */
+            padding-left: 10px;
+            padding-right: 10px;
+            /* Puedes ajustar el espaciado a la derecha según tus preferencias */
+            text-decoration: none;
+            /* Esto elimina el subrayado predeterminado de los enlaces */
+            display: inline-block;
+            /* Asegura que el padding y el border afecten solo al lado derecho */
+            font-family: $font-principal;
+        }
+    }
+}
+
+
+.heder01-3 {
+    width: 20%;
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-left: 10px;
+        }
+    }
+}
+
+.heder01-4 {
+    width: 10%;
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+
+        li {
+            margin-left: 10px;
+        }
+    }
+}
+
+.heder02 {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    background-color: $color-principal-morado;
+    font-family: $font-principal;
+    font-size: $font-zise-9;
+    color: $color-blanco;
+    padding: $pading-general;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heder02-1 {
+    h1 {
+        font-family: $font-logo;
+        font-size: $font-zise-20;
+    }
+}
+
+.nav02 {
+    ul {
+        list-style: none;
+        display: flex;
+
+        a {
+            color: $color-blanco;
+            padding-left: 40px;
+            text-decoration: none;
+            /* Esto elimina el subrayado predeterminado de los enlaces */
+            display: inline-block;
+            /* Asegura que el padding y el border afecten solo al lado derecho */
+            font-family: $font-principal;
+            font-size: $font-zise-13;
+        }
+    }
+}
+
+//inicio MAIN
+
+main {
+    background-color: $color-blanco;
+    padding: $pading-general;
+   
+
+    h1 {
+        font-family: $font-principal;
+        font-size: $font-zise-36;
+        color: $color-complementario-azul;
+        font-weight: $Font-weight-medium;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+}
+
+.contenedor {
+    display: flex;
+}
+
+.formulario1 {
+    @include formulario1;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    button {
+        @include boton-negro;
+    }
+
+    input {
+        @include campos-de-texto;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    h4 {
+        white-space: nowrap;
+        text-align: center
+    }
+}
+
+.check {
+    @include check;
+}
+
+.form2 {
+    display: flex;
+}
+
+//cajas pequeñas del lado izquierdo
+
+.cabecera {
+    @include cabecera;
+}
+
+.cajita-morada {
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.contenido {
+    padding: 10px;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    vertical-align: middle;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.check2 {
+    input {
+        @include check;
+    }
+
+
+    justify-content: left;
+
+
+
+}
+
+.contenido2 {
+    @include contenidocajitas;
+    padding: 10px;
+    height: 200px;
+    display: grid;
+    align-items: center;
+    vertical-align: middle;
+
+    div {
+        display: flex;
+    }
+}
+
+//prueba lengueta
+/* Contenedor de las lengüetas */
+
+.lenguetas {
+    width: 100%;
+    margin: 0 10px 10px 10px;
+    background-color: $color-blanco;
+
+
+}
+
+.tabs-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    border-color: #fff;
+
+    h3 {
+        font-family: $font-principal;
+        font-size: $font-zise-15;
+        font-weight: $Font-weight-medium;
+        color: $color-blanco;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+}
+
+.tablalengueta {
+    background-color: $color-blanco;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    font-size: $font-zise-13;
+    font-family: $font-principal;
+    font-weight: $Font-weight-semi-bold;
+   
+
+}
+
+/* Estilo de las lengüetas */
+.tab {
+    flex: 1;
+    padding: 10px 30px;
+    text-align: center;
+    background-color: $color-complementario-azul;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo de las lengüetas al pasar el ratón */
+.tab:hover {
+    background-color: $color-principal-morado;
+}
+
+/* Estilo del contenido de las lengüetas */
+.tab-content {
+    display: none;
+
+    background-color: $color-blanco;
+
+}
+
+/* Mostrar contenido activo */
+.tab-content.active {
+    display: block;
+}
+
+.cabecera-lengueta {
+    background-color: $color-complementario-azul;
+    color: $color-blanco;
+    font-family: $font-principal;
+    font-size: $font-zise-15;
+    font-weight: $Font-weight-bold;
+    width: 100%;
+    height: 70px;
+    display: flex;
+
+    h3 {
+        font-family: $font-principal;
+        font-size: $font-zise-15;
+        font-weight: $Font-weight-medium;
+        color: $color-blanco;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+.cajaleng {
+
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: $color-complementario-azul;
+    border: 0.5px solid #484848;
+    padding: 10px;
+    
+
+    img {
+        padding: 10px;
+    }
+
+}
+
+.cajaleng2 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    color: $color-complementario-azul;
+    border: 0.5px solid #484848;
+    padding: 10px;
+}
+
+
+//fin prueba lengueta
+
+//ladoderecho promera parte
+
+.contenedorvuelosytexto {
+    padding: 10px;
+}
+
+.vuelos {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 40px 40px;
+    background-color: $color-principal-morado;
+    border-radius: 8px 8px 0 0;
+    font-family: $font-principal;
+    color: $color-blanco;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        font-size: $font-zise-9;
+        font-weight: $Font-weight-regular;
+    }
+
+    h6 {
+        font-size: $font-zise-15;
+        font-weight: $Font-weight-bold;
+    }
+}
+
+.vuelos2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 40px 40px;
+    background-color: $color-principal-morado;
+
+    font-family: $font-principal;
+    color: $color-blanco;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        font-size: $font-zise-9;
+        font-weight: $Font-weight-regular;
+    }
+
+    h6 {
+        font-size: $font-zise-15;
+        font-weight: $Font-weight-bold;
+    }
+}
+
+.cajitamorada {
+    background-color: $color-complementario-naranjo;
+    color: $color-blanco;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    border-radius: 8px 0 0 0;
+
+    img {
+        padding: 10px;
+    }
+
+    font-size: $font-zise-13;
+    font-weight: $Font-weight-medium;
+}
+
+.cajitamorada2 {
+    background-color: $color-complementario-naranjo;
+    color: $color-blanco;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+
+
+    img {
+        padding: 10px;
+    }
+
+    font-size: $font-zise-13;
+    font-weight: $Font-weight-medium;
+}
+
+.texto {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    background-color: $color-font-gris-claro;
+    font-family: $font-principal;
+    color: $color-blanco;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        font-size: $font-zise-9;
+        font-weight: $Font-weight-regular;
+    }
+
+    h6 {
+        font-size: $font-zise-15;
+        font-weight: $Font-weight-bold;
+    }
+}
+
+.pequeñocirculo {
+
+    width: 10px;
+    height: 10px;
+    background-color: $color-complementario-azul;
+    border-radius: 50%;
+
+}
+
+.divtabla2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.divinternotabla2 {
+    display: flex;
+    align-items: center;
+
+
+    img {
+        padding: 10px;
+    }
+}
+
+.maletas {
+    img {
+        height: 40px;
+        width: 40px;
+        background-image: $color-complementario-verde;
+    }
+}
+
+
+//ladoderecho segunda parte
+
+.divición-derecha {
+    display: flex;
+}
+
+.caja-verde {
+    width: 37%;
+}
+
+.oferta1 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: $color-complementario-azul;
+
+    p {
+        text-align: left;
+        font-size: $font-zise-9;
+        font-weight: $Font-weight-black;
+        padding: 5px 0 5px 0;
+    }
+
+    h2 {
+        font-size: $font-zise-24;
+        font-weight: $Font-weight-bold;
+        padding: 5px 0 5px 0;
+    }
+
+    h3 {
+        font-size: $font-zise-13;
+        font-weight: $Font-weight-medium;
+        color: $color-font-gris-claro;
+        padding: 5px 0 5px 0;
+
+
+    }
+
+    h4 {
+        font-size: $font-zise-9;
+        font-weight: $Font-weight-black;
+        padding: 5px 0 5px 0;
+    }
+
+}
+
+
+.boton-naranjo {
+    @include boton-naranjo;
+    border: 10px;
+    width: 100%;
+}
+
+.padin{
+    padding: 10px;
+}
+.cabecera-verde {
+    background-color: $color-complementario-verde;
+    border-radius: 8px 8px 0 0;
+
+    h2 {
+        font-family: $font-principal;
+        color: $color-blanco;
+        font-size: $font-zise-13;
+        font-weight: $Font-weight-medium;
+        padding: 15px;
+    }
+}
+
+
+
+//termino  MAIN
+
+
+
+
+
+
+
+
++ //FOOTER
+
+//PRIMERA SECTION
+
+footer {
+    padding: $pading-general;
+}
+
+.footer00 {
+    background-color: $color-gris-claro;
+    height: 470px;
+    font-family: $font-principal;
+    padding: $pading-general;
+
+    h2 {
+        padding: 20px;
+        color: $color-complementario-azul;
+        font-weight: $Font-weight-light;
+    }
+}
+
+.footer00-div01 {
+    //contenedor principasl de las cajas de opinion
+    align-items: center;
+    background-color: $color-blanco;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+
+    p {
+        font-size: $font-zise-8;
+        padding: 10px;
+    }
+}
+
+.footer00-article01 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    gap: 5px;
+    color: $color-font-gris-claro;
+
+}
+
+.footer00-div02 {
+    display: flex;
+    align-items: center;
+
+    h4 {
+        font-size: $font-zise-13;
+        font-weight: $Font-weight-bold;
+        padding-left: 10px;
+    }
+
+    h5 {
+        font-size: $font-zise-8;
+        padding-left: 10px;
+        font-weight: $Font-weight-semi-bold;
+    }
+}
+
+.padintextocaja {
+    padding: 20px;
+}
+
+.footer00-article02 {
+    @include cajalargafooter;
+
+    img {
+        filter: grayscale(100%);
+        padding-right: 3%;
+    }
+}
+
+.footer00-article03 {
+    @include cajalargafooter;
+
+    img {
+        padding-right: 3%;
+    }
+}
+
+//formato para certificaciones
+.footer00-article02-h3h4 {
+    font-family: $font-principal;
+    color: $color-complementario-azul;
+
+    h3 {
+        font-size: $font-zise-20;
+        font-weight: $Font-weight-semi-bold;
+    }
+
+    h4 {
+        font-size: $font-zise-13;
+        font-weight: $Font-weight-regular;
+    }
+}
+
+
+//SEGUNDA SECTION (primera parte mnorada)
+
+.footer01 {
+    display: flex;
+    align-items: center;
+    background-color: $color-principal-morado;
+    padding: $pading-general;
+    color: $color-blanco;
+    justify-content: space-between;
+}
+
+.footer01-div01 {
+    padding: 10px;
+
+    h1 {
+        font-size: $font-zise-36;
+        font-family: $font-logo;
+        font-weight: $Font-weight-extra-bold;
+    }
+}
+
+.footer01-div02 {
+    @include footer01-div;
+}
+
+.footer01-div03 {
+    @include footer01-div;
+}
+
+.footer01-div04 {
+    @include footer01-div;
+}
+
+.footer01-div05 {
+    @include footer01-div;
+}
+
+//footer: sectión02  (segunda parte moirada )
+.footer02 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: $color-principal-morado;
+    padding: $pading-general;
+    color: $color-blanco;
+    justify-content: space-between;
+
+    h3 {
+        @include footerh3;
+    }
+
+    p {
+        @include footerp;
+    }
+}
+
+.footer03 {
+    padding: $pading-general;
+    height: 50px;
+    background-color: $color-principal-morado;
+    color: $color-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        @include footerp;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.footer04 {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-negro;
+    color: $color-blanco;
+    padding: $pading-general;
+
+    p {
+        @include footerp;
+    }
+
+    img {
+        @include redessocialesfoter;
+        color: $color-blanco;
+    }
+}
+
+.redesfooter {
+    width: 10%;
+    color: $color-blanco;
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        color: $color-blanco;
+
+        li {
+            margin-left: 10px;
+            color: $color-blanco;
+        }
+
+    }
+
+}
